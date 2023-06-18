@@ -11,9 +11,9 @@ class SpindlerBattery(Battery):
 
     def needs_service(self) -> bool:
         time_difference = self.current_date - self.last_service_date
-        two_years_ago = timedelta(days=365 * 2)
+        three_years_ago = timedelta(days=365 * 3)
 
-        if time_difference > two_years_ago:
+        if time_difference > three_years_ago:
             return True
         else:
             return False
